@@ -6,10 +6,10 @@ type NoShowOptions = {
   input: TNoShowInputSchema;
 };
 
-export const noShowHandler = async ({ input }: NoShowOptions) => {
+export const markNoShow = async ({ input }: NoShowOptions) => {
   const { bookingUid, noShowHost } = input;
 
   return handleMarkNoShow({ bookingUid, noShowHost });
 };
 
-export default noShowHandler;
+export default markNoShow;
