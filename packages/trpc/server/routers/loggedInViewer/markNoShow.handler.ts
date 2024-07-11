@@ -1,15 +1,15 @@
 import handleMarkNoShow from "@calcom/features/handleMarkNoShow";
 
-import type { TNoShowInputSchema } from "./noShow.schema";
+import type { TNoShowInputSchema } from "./markNoShow.schema";
 
 type NoShowOptions = {
   input: TNoShowInputSchema;
 };
 
 export const noShowHandler = async ({ input }: NoShowOptions) => {
-  const { bookingUid, attendees } = input;
+  const { bookingUid, noShowHost } = input;
 
-  return handleMarkNoShow({ bookingUid, attendees });
+  return handleMarkNoShow({ bookingUid, noShowHost });
 };
 
 export default noShowHandler;
